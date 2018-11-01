@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>点击置顶</title>
+<style type="text/css">
+	button{
+		width: 80px;
+		height: 40px;
+		float: right;
+		color: #FFFFFF;
+		background: darkblue;
+		position: absolute;
+		right: 10px;
+		bottom: -700px;
+				}
+	     		</style>
+			</head>
+	<body>
+			<!--<div style="height:200px; width:200px; background:pink; margin:0px auto;"></div>-->
+			<img src="img/images/image05 (3).jpg"/>
+			<img src="img/images/image05 (3).jpg"/>
+			<br />
+			<button onclick="Topfun()">点击向上</button>
+			
+  <script type="text/javascript">
+			var four;
+			function Topfun(){
+			four=setInterval(FourscrollBy,10);
+			
+			}
+			function FourscrollBy(eachHeight){
+			if(document.documentElement && document.documentElement.scrollTop) //IE
+			{
+			if(document.documentElement.scrollTop<=0){
+			clearInterval(four);
+			}else{
+			window.scrollBy(0,-30);
+			}
+			}else{ //Chrome不支持documentElement.scrollTop
+			if(document.body.scrollTop<=0){
+			clearInterval(four);
+			}else{
+			window.scrollBy(0,-30);
+			}
+			}
+			}
+</script>
+		</body>
+		</html>
